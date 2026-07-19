@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>كنوز - تسوق الآن</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        /* ===== style.css ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Tajawal', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #FFFFFF 0%, #F0F0FF 100%);
+            min-height: 100vh;
+        }
+
+        .page-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 30px;
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-left: 20px;
+            padding-right: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* ===== ad-left.css ===== */
+        .ad-left {
+            width: 160px;
+            height: 300px;
+            background: #f0f0f0;
+            border: 2px dashed #ccc;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        .ad-left:hover {
+            border-color: #A855F7;
+            background: #f8f4ff;
+        }
+
+        .ad-left i {
+            font-size: 2rem;
+            color: #bbb;
+            margin-left: 10px;
+        }
+
+        /* ===== container.css ===== */
+        .container {
+            text-align: center;
+            padding: 20px;
+            max-width: 800px;
+            flex: 1;
+        }
+
+        /* ===== logo.css ===== */
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #1A1A2E;
+            margin-bottom: 1.5rem;
+        }
+
+        .logo i {
+            color: #FF6B8A;
+            margin-left: 12px;
+        }
+
+        .logo span {
+            background: linear-gradient(135deg, #FF6B8A, #A855F7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* ===== motivation.css ===== */
+        .motivation {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #1A1A2E;
+            margin-bottom: 0.3rem;
+            line-height: 1.4;
+        }
+
+        .motivation i {
+            color: #FFD700;
+            margin: 0 8px;
+        }
+
+        .sub-text {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        /* ===== btn-shop.css ===== */
+        .btn-shop {
+            background: linear-gradient(135deg, #4A8DFF, #A855F7);
+            color: white;
+            padding: 20px 65px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 1.4rem;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            box-shadow: 0 6px 35px rgba(74, 141, 255, 0.35);
+            text-decoration: none;
+            animation: pulse-btn 2.5s infinite;
+            margin-top: 0.3rem;
+        }
+
+        .btn-shop:hover {
+            transform: scale(1.06);
+            box-shadow: 0 8px 50px rgba(74, 141, 255, 0.5);
+        }
+
+        @keyframes pulse-btn {
+            0%, 100% {
+                box-shadow: 0 6px 35px rgba(74, 141, 255, 0.35);
+            }
+            50% {
+                box-shadow: 0 6px 55px rgba(168, 85, 247, 0.5);
+            }
+        }
+
+        /* ===== arrow.css ===== */
+        .arrow-down {
+            font-size: 2.5rem;
+            color: #A855F7;
+            animation: bounce-arrow 1.8s infinite;
+            margin: 0.3rem 0;
+        }
+
+        @keyframes bounce-arrow {
+            0%, 100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(12px);
+                opacity: 0.5;
+            }
+        }
+
+        /* ===== ad-right.css ===== */
+        .ad-right {
+            width: 300px;
+            height: 250px;
+            flex-shrink: 0;
+            margin-top: 10px;
+            overflow: hidden;
+            border-radius: 16px;
+        }
+
+        .ad-right iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* ===== responsive.css ===== */
+        @media (max-width: 992px) {
+            .ad-left {
+                display: none;
+            }
+            .ad-right {
+                display: none;
+            }
+            .page-wrapper {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding-top: 10px;
+            }
+
+            .page-wrapper {
+                padding-top: 10px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .logo {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            .motivation {
+                font-size: 1.6rem;
+            }
+
+            .sub-text {
+                font-size: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            .btn-shop {
+                padding: 16px 40px;
+                font-size: 1.1rem;
+            }
+
+            .arrow-down {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-wrapper">
+
+        <!-- ===== مستطيل الإعلان الأيسر ===== -->
+        <div class="ad-left">
+            <i class="fas fa-ad"></i>
+            <span>إعلان<br />160x300</span>
+        </div>
+
+        <!-- ===== المحتوى المركزي ===== -->
+        <div class="container">
+
+            <!-- ===== الشعار ===== -->
+            <div class="logo">
+                <i class="fas fa-treasure-chest"></i>
+                <span>كنوز</span>
+            </div>
+
+            <!-- ===== الجملة التحفيزية ===== -->
+            <div class="motivation">
+                <i class="fas fa-star"></i>
+                أفضل المنتجات بأسعار رمزية
+                <i class="fas fa-star"></i>
+            </div>
+
+            <p class="sub-text">
+                <i class="fas fa-gem" style="color: #FF6B8A;"></i>
+                اكتشف عروضنا الحصرية واستمتع بتجربة تسوق لا تُنسى
+                <i class="fas fa-gem" style="color: #FF6B8A;"></i>
+            </p>
+
+            <!-- ===== سهم متحرك ===== -->
+            <div class="arrow-down">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+
+            <!-- ===== زر التسوق ===== -->
+            <a href="https://rolemall.com/wC6ofFAshop" target="_blank" class="btn-shop">
+                <i class="fas fa-shopping-cart"></i> تسوق الآن
+            </a>
+
+        </div>
+
+        <!-- ===== مستطيل الإعلان الأيمن ===== -->
+        <div class="ad-right">
+            <script>
+                atOptions = {
+                    'key': 'a7e1a22928a6e19067a8fde104484e86',
+                    'format': 'iframe',
+                    'height': 250,
+                    'width': 300,
+                    'params': {}
+                };
+            </script>
+            <script src="https://www.highperformanceformat.com/a7e1a22928a6e19067a8fde104484e86/invoke.js">
+            </script>
+        </div>
+
+    </div>
+
+</body>
+</html>

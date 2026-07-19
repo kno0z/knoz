@@ -1,0 +1,310 @@
+.hero {
+    background: linear-gradient(135deg, #FFFFFF 0%, #F0F0FF 100%);
+    padding: 40px 0 60px;
+}
+
+.hero-content {
+    max-width: 1000px;
+}
+
+/* ===== 🛍️ قسم التسوق (في الأعلى) ===== */
+.hero-shop-top {
+    background: linear-gradient(135deg, #FFFFFF, #FFF5F7);
+    border-radius: 28px;
+    padding: 2.5rem 2.5rem;
+    box-shadow: 0 8px 40px rgba(255, 107, 138, 0.12);
+    border: 2px solid #FF6B8A;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-shop-top::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 107, 138, 0.03) 0%, transparent 70%);
+    animation: shimmer 4s infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+}
+
+/* ===== العبارة الرئيسية ===== */
+.shop-text {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1A1A2E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 0.5rem;
+}
+
+.shop-text i {
+    font-size: 1.6rem;
+}
+
+.shop-text i:first-child {
+    color: #FFD700;
+}
+
+.shop-text i:last-child {
+    color: #FFD700;
+}
+
+/* ===== علامة الصح ===== */
+.shop-check {
+    font-size: 3rem;
+    color: #4CAF50;
+    margin: 0.2rem 0;
+    animation: check-pop 1.5s ease-in-out infinite;
+}
+
+@keyframes check-pop {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+}
+
+/* ===== زر التسوق الرئيسي ===== */
+.btn-shop-main {
+    background: linear-gradient(135deg, #4A8DFF, #A855F7);
+    color: white;
+    padding: 18px 60px;
+    border-radius: 60px;
+    font-weight: 700;
+    font-size: 1.3rem;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 6px 35px rgba(74, 141, 255, 0.35);
+    border: none;
+    cursor: pointer;
+    animation: pulse-btn 2.5s infinite;
+    text-decoration: none;
+    margin: 0.5rem 0;
+}
+
+.btn-shop-main:hover {
+    transform: scale(1.06);
+    box-shadow: 0 8px 50px rgba(74, 141, 255, 0.5);
+}
+
+@keyframes pulse-btn {
+    0%, 100% {
+        box-shadow: 0 6px 35px rgba(74, 141, 255, 0.35);
+    }
+    50% {
+        box-shadow: 0 6px 55px rgba(168, 85, 247, 0.5);
+    }
+}
+
+/* ===== ميزات التسوق ===== */
+.shop-features {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.shop-features span {
+    background: #F8F9FA;
+    padding: 0.5rem 1.8rem;
+    border-radius: 60px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #1A1A2E;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #eee;
+}
+
+.shop-features span i {
+    color: #FF6B8A;
+}
+
+.shop-features span:last-child i {
+    color: #A855F7;
+}
+
+/* ===== الفاصل ===== */
+.hero-divider {
+    text-align: center;
+    margin: 1.5rem 0 2rem;
+    position: relative;
+}
+
+.hero-divider::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to left, transparent, #e0d6cc, transparent);
+}
+
+.hero-divider span {
+    background: #F0F0FF;
+    padding: 0.3rem 2rem;
+    border-radius: 60px;
+    font-weight: 600;
+    color: #1A1A2E;
+    font-size: 0.95rem;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+}
+
+.hero-divider span i {
+    color: #FF6B8A;
+    margin-left: 8px;
+}
+
+/* ===== عنوان الأقسام ===== */
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    color: #1A1A2E;
+    text-align: right;
+}
+
+.hero h1 span {
+    background: linear-gradient(135deg, #FF6B8A, #A855F7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    text-align: right;
+    margin-bottom: 2rem;
+}
+
+.hero-subtitle i {
+    color: #A855F7;
+    margin-left: 8px;
+}
+
+/* ===== أقسام الأدوات ===== */
+.hero-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: flex-start;
+}
+
+.category-tag {
+    background: white;
+    padding: 0.6rem 1.5rem;
+    border-radius: 60px;
+    border: 2px solid #eee;
+    color: #1A1A2E;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.category-tag i {
+    color: #FF6B8A;
+}
+
+.category-tag:hover {
+    border-color: #FF6B8A;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 107, 138, 0.15);
+    background: #FFF5F7;
+}
+
+/* ===== استجابة ===== */
+@media (max-width: 768px) {
+    .hero {
+        padding: 20px 0 40px;
+    }
+
+    .hero-shop-top {
+        padding: 1.5rem 1rem;
+    }
+
+    .shop-text {
+        font-size: 1.4rem;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .shop-text i {
+        font-size: 1.2rem;
+    }
+
+    .shop-check {
+        font-size: 2.2rem;
+    }
+
+    .btn-shop-main {
+        padding: 14px 30px;
+        font-size: 1rem;
+        gap: 10px;
+    }
+
+    .shop-features {
+        gap: 0.8rem;
+    }
+
+    .shop-features span {
+        font-size: 0.8rem;
+        padding: 0.3rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+        text-align: right;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
+        text-align: right;
+    }
+
+    .hero-categories {
+        gap: 0.6rem;
+    }
+
+    .category-tag {
+        font-size: 0.8rem;
+        padding: 0.4rem 1rem;
+    }
+
+    .hero-divider {
+        margin: 1rem 0 1.5rem;
+    }
+
+    .hero-divider span {
+        font-size: 0.8rem;
+        padding: 0.2rem 1.2rem;
+    }
+}

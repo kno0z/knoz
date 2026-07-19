@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Tajawal', sans-serif;
+}
+
+body {
+    background: #F8F9FA;
+    color: #1A1A2E;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #4A8DFF;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #1A1A2E;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-title i {
+    color: #FF6B8A;
+}

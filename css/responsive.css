@@ -1,0 +1,42 @@
+@media (max-width: 992px) {
+    .categories-grid,
+    .tools-grid,
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .counter-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .categories-grid,
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

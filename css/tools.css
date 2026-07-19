@@ -1,0 +1,47 @@
+/* رسالة الأدوات الفارغة */
+.empty-tools {
+    text-align: center;
+    padding: 80px 20px;
+    background: white;
+    border-radius: 28px;
+    border: 2px dashed #e0d6cc;
+    margin-bottom: 2rem;
+}
+
+.empty-tools i {
+    font-size: 4rem;
+    color: #d4af6e;
+    margin-bottom: 1rem;
+}
+
+.empty-tools h3 {
+    font-size: 2rem;
+    color: #1e2b2f;
+    margin-bottom: 0.5rem;
+}
+
+.empty-tools p {
+    color: #7a6e62;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.empty-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.empty-stats span {
+    background: #f3ede7;
+    padding: 0.5rem 1.5rem;
+    border-radius: 40px;
+    color: #1e2b2f;
+    font-weight: 500;
+}
+
+.empty-stats i {
+    font-size: 1rem;
+    margin-left: 6px;
+}
